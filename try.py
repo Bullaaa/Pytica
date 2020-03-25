@@ -19,6 +19,9 @@ class Window(Frame):
 
         self.pack(fill=BOTH, expand=1)
 
+        entry_label = tk.Label(root, text = "Import any file.")
+        entry_label.pack()
+
         menu = Menu(self.master)
 
         self.master.config(menu=menu)
@@ -45,8 +48,8 @@ class Window(Frame):
     
     def import_csv(self):
 
-        filename = askopenfilename()
-        print(filename.type)
+        filepath = askopenfilename()
+        print(filepath)
 
 
 
@@ -57,7 +60,7 @@ root.geometry("600x800")
 
 app = Window(root)
 
-entry_label = tk.Label(root, text = "Import any file.")
-entry_label.pack()
+# entry_label = tk.Label(root, text = "Import any file.")
+# entry_label.pack()
 
 root.mainloop()
